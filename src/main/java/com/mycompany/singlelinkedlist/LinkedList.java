@@ -79,4 +79,32 @@ class LinkedList {
          }
       }
    }
+   public void printList() {
+      Node node = head;
+      while (node != null) {
+         System.out.print(node.data + " ");
+         node = node.next;
+      }
+      System.out.println();
+   }
+    
+   public int size() {
+       int count = 0;
+       Node temp = head;
+       while(temp != null){
+           count++;
+           temp = temp.next;
+       }
+       return count;
+   }
+//After that find the sum of numbers in the second list.  (n should be less than 1,000,000).
+   public int sum() {
+       Node temp = head;
+       int sum=0;
+       while(temp != null){
+           sum += temp.data;
+           temp = temp.next;
+       }
+       return sum;
+   }     
 }
